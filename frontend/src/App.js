@@ -95,28 +95,31 @@ function App() {
           </div>
         </div>
       </div>
-      <table className='list'>
-        <tbody>
-          <tr className='header'>
-            <th>#</th>
-            <th>Platform</th>
-            <th>Last Traded Price</th>
-            <th>Buy / Sell Price</th>
-            <th>Volume</th>
-            <th>Base Unit</th>
-          </tr>
-          {list?.map((key, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{key.name}</td>
-              <td>{key.last}</td>
-              <td>{`₹ ${key.buy} / ₹ ${key.sell}`}</td>
-              <td>{key.volume}</td>
-              <td>{key.base_unit}</td>
+      <div className='table'>
+        <table className='list'>
+          <tbody>
+            <tr className='header'>
+              <th>#</th>
+              <th>Platform</th> 
+              <th>Last Traded Price</th>
+              <th>Buy / Sell Price</th>
+              <th>Volume</th>
+              <th>Base Unit</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+            {list?.map((key, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{key.name}</td>
+                <td>{key.last}</td>
+                <td>{`₹ ${key.buy} / ₹ ${key.sell}`}</td>
+                <td>{key.volume}</td>
+                <td>{key.base_unit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
           
       <footer>
             <p>Copyright &copy; 2019{'\u00A0\u00A0\u00A0\u00A0'}HodlInfo.com</p>

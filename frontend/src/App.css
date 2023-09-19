@@ -6,6 +6,7 @@
   min-height: 100vh;
   font-family: Oswald,sans-serif;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .App nav .logo{
   height: 59px;
@@ -160,7 +161,11 @@ input:checked + .slider:before {
   margin: 0;
   margin-top: -30px;
 }
-
+.App .table{
+  width: 100%;
+  overflow-x: scroll;
+  margin: auto;
+}
 .App .list{
   width: 95%;
   border-collapse: separate;
@@ -168,11 +173,12 @@ input:checked + .slider:before {
   align-self: center;
   justify-self: center;
   margin: auto;
+  min-width: 1000px;
 }
 .App .list .header{
   background-color: transparent !important;
   font-family: Oswald;
-  font-size: 24px;
+  font-size: 24px; 
   opacity: .45;
   letter-spacing: 1px;
   margin: 0 0 -5px;
@@ -246,4 +252,47 @@ tbody td:last-child {
 .fixed-footer button:hover{
   background-color: #17a2b8;
   color: white;
+}
+.App nav > .options >select{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (max-width:1100px) {
+  .App nav > .options{
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width:900px) {
+  .App nav > .rightHeader{
+    /* flex-direction: column; */ 
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  } 
+  .App .headerWrapper >.figure>h6{
+    font-size: 14px;
+   
+  }
+  .App .headerWrapper >.figures>div>h2{
+    font-size: 20px;
+    margin-top: -10px;
+}
+.App .headerWrapper >.figures>div>p{
+    font-size: 14px;
+}
+.App .headerWrapper >.figures>div>span{
+  font-size: 10px;
+}
+}
+@media screen and (max-width:778px) {
+  .App nav {
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+  }
 }
