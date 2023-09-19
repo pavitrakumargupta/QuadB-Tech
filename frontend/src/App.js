@@ -8,7 +8,7 @@ function App() {
   const [timer,setTimer]=useState(60)
 
   const fetchData=async()=>{
-    const {data}=await axios.get("http://localhost:5000/getInfo");
+    const {data}=await axios.get("https://quadb-t.onrender.com/getInfo");
     console.log(data);
     setList(data)
   }
