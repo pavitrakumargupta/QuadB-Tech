@@ -25,7 +25,7 @@ app.use(express.json())
 app.use("/",userRoutes)
 
 
-app.use(notFound);
+app.use(notFound); 
 app.use(errorHandler);
 
 app.get('/', function(req, res){
